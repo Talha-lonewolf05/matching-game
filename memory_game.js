@@ -13,16 +13,16 @@ $(document).ready(function(){
     let timer_started = false;
     let timer_interval;
 
-    // Start game
+    
     shuffle_cards();
     create_board();
 
-    // Shuffle symbols
+ 
     function shuffle_cards(){
         symbols.sort(() => Math.random() - 0.5);
     }
 
-    // Create cards on board
+    
     function create_board(){
         for(let i=0;i<symbols.length;i++){
             let card = $("<div></div>");
@@ -33,7 +33,7 @@ $(document).ready(function(){
         }
     }
 
-    // Timer function
+  
     function start_timer(){
         timer_interval = setInterval(function(){
             timer++;
@@ -41,7 +41,7 @@ $(document).ready(function(){
         },1000);
     }
 
-    // Card click event
+   
     $(document).on("click",".card",function(){
 
         if(lock_board) return;
@@ -68,7 +68,7 @@ $(document).ready(function(){
         }
     });
 
-    // Check if cards match
+    
     function check_match(){
         if(first_card.attr("data_symbol") == second_card.attr("data_symbol")){
             $("#match_sound")[0].play();
@@ -76,7 +76,7 @@ $(document).ready(function(){
             reset_cards();
 
             if(matched_pairs == symbols.length/2){
-                clearInterval(timer_interval); // stop timer
+                clearInterval(timer_interval); 
                 $("#win_message").fadeIn();
             }
 
@@ -96,7 +96,7 @@ $(document).ready(function(){
         lock_board = false;
     }
 
-    // Restart button
+   
     $("#restart_button").click(function(){
         first_card = null;
         second_card = null;
@@ -116,5 +116,6 @@ $(document).ready(function(){
 
         clearInterval(timer_interval);
     });
+
 
 });
