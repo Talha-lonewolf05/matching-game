@@ -1,0 +1,72 @@
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+#game_header{
+    margin-bottom: 20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+}
+
+#game_board{
+    width:420px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+
+.card{
+    width:90px;
+    height:90px;
+    margin:6px;
+    background:#1e293b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    border-radius:10px;
+    cursor:pointer;
+    transition: transform 0.4s, background 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card.flipped{
+    background:#f1f5f9;
+    color:#111;
+    transform: rotateY(180deg);
+}
+
+#win_message{
+    display:none;
+    margin-top:30px;
+    font-size:24px;
+    color:#22c55e;
+}
+
+#restart_button{
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border:none;
+    border-radius:5px;
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+    transition:background 0.3s;
+}
+
+#restart_button:hover{
+    background:#16a34a;
+}

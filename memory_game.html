@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Matching Game</title>
+<link rel="stylesheet" href="memory_game.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<div id="game_header">
+    <h1>Memory Matching Game</h1>
+    <div class="stats">
+        <p>Moves: <span id="moves">0</span></p>
+        <p>Time: <span id="timer">0</span> s</p>
+    </div>
+</div>
+
+<div id="game_board"></div>
+
+<div id="win_message">
+    <h2>🎉 You Win!</h2>
+    <button id="restart_button">Restart Game</button>
+</div>
+
+<audio id="match_sound" src="match.mp3"></audio>
+<audio id="wrong_sound" src="wrong.mp3"></audio>
+
+<script src="memory_game.js"></script>
+</body>
+</html>
